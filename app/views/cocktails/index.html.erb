@@ -1,0 +1,12 @@
+<!-- index.html.erb -->
+<h1 class="text-center">Magic Shaky Cocktails</h1>
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |c| %>
+      <div class="col-xs-12 col-sm-4">
+        <%= render "cocktail_card", cocktail: c %>
+      </div>
+    <% end %>
+  </div>
+</div>
