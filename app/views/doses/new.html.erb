@@ -1,0 +1,9 @@
+<div>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.error_notification %>
+      <%= f.input :description %>
+      <%= f.input :ingredient_id, collection: Ingredient.all, selected: 0 %>
+      <%= f.button :submit, input_html: {class: "text-center"} %>
+    <% end %>
+</div>
+
