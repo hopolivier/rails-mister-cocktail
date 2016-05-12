@@ -3,6 +3,7 @@
     <%= f.error_notification %>
       <%= f.input :description %>
       <%= f.input :ingredient_id, collection: Ingredient.all, selected: 0 %>
+<!-- le mieux est de mettre Ingredient.all dans une variable d'instance du controleur @ingredients et de la passer à la vue -->
       <%= f.button :submit, input_html: {class: "text-center"} %>
     <% end %>
 </div>

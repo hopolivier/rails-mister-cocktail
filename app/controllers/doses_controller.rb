@@ -12,15 +12,18 @@ def create
   if @dose.save
     redirect_to cocktail_path(@cocktail)
   else
-    # render 'cocktails/show'
-    render 'doses/new'
+    # Il s'agit de la meilleure option (l'option commentée est là pour le rake)
+    # l'argument du render est une route
+    render 'cocktails/show'
+    # render 'doses/new'
   end
 end
 
 def destroy
   @dose = Dose.find(params[:id])
+  @cocktail = @dose.cocktail
   @dose.destroy
-  redirect_to cocktails_path
+  redirect_to cocktail_path(@cocktail)
 end
 
 private
