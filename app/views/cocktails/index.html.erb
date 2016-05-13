@@ -1,18 +1,25 @@
 <!-- index.html.erb -->
-<h1 class="text-center">Magic Shaky Cocktails</h1>
-
-<div class="container">
-  <div class="row">
-    <% @cocktails.each do |c| %>
-      <div class="col-xs-12 col-sm-4">
-        <div>
-          <%= image_tag c.photo.url(:thumb) %>
-          <div class="card-description">
-            <h2><%= c.name %></h2>
+<div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_url "cadillac_lounge.jpeg" %>');">
+<!-- <div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('../../assets/images/cadillac_lounge.jpeg');">
+ -->  <div class="banner-content text-center">
+    <h1>MIXTURES</h1>
+    <div class="container">
+      <div class="row">
+        <% @cocktails.each do |c| %>
+          <div class="col-xs-12 col-sm-4">
+            <div>
+              <%= link_to cocktail_path(c), class: "card-link" do %>
+                <%= image_tag c.photo.url(:thumb) %>
+              <% end %>
+              <div >
+                <h2><%= c.name %></h2>
+              </div>
+            </div>
           </div>
-        </div>
-        <%= link_to "show", cocktail_path(c), class: "card-link" %>
+        <% end %>
       </div>
-    <% end %>
+    </div>
+    <p></p>
   </div>
 </div>
+
