@@ -34,6 +34,7 @@ gem 'figaro'
 
 # image uploading
 gem 'cloudinary'
+gem 'carrierwave'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
