@@ -29,6 +29,9 @@ gem 'font-awesome-sass', '~> 4.2.0'
 gem 'simple_form'
 gem "autoprefixer-rails"
 
+# figaro gem
+gem 'figaro'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
