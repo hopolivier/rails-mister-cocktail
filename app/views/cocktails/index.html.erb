@@ -2,11 +2,11 @@
 <h1 class="text-center">Magic Shaky Cocktails</h1>
 
 <div class="container">
-  <%= cl_image_tag("duisuqtzqnlybrjmnrhp", width: 400, height: 300, crop: :fill) %>
   <div class="row">
     <% @cocktails.each do |c| %>
       <div class="col-xs-12 col-sm-4">
         <%= render "cocktail_card", cocktail: c %>
+        <%= link_to "show", cocktail_path(c), class: "card-link" %>
       </div>
     <% end %>
   </div>
