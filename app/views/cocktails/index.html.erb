@@ -5,7 +5,12 @@
   <div class="row">
     <% @cocktails.each do |c| %>
       <div class="col-xs-12 col-sm-4">
-        <%= render "cocktail_card", cocktail: c %>
+        <div>
+          <%= image_tag c.photo.url(:thumb) %>
+          <div class="card-description">
+            <h2><%= c.name %></h2>
+          </div>
+        </div>
         <%= link_to "show", cocktail_path(c), class: "card-link" %>
       </div>
     <% end %>
