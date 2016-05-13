@@ -32,6 +32,9 @@ gem "autoprefixer-rails"
 # figaro gem
 gem 'figaro'
 
+# image uploading
+gem 'cloudinary'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
